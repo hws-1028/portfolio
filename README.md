@@ -1,73 +1,97 @@
-# React + TypeScript + Vite
+# Ana Sofía Ricardo Aguilar — Portafolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portafolio profesional como Desarrolladora Full Stack. Construido con **React 19**, **TypeScript 6** y **Framer Motion**, desplegado con **Vite 8**.
 
-Currently, two official plugins are available:
+[![Vite](https://img.shields.io/badge/Vite-8.0-646CFF?style=flat&logo=vite)](https://vitejs.dev)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat&logo=react)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-3178C6?style=flat&logo=typescript)](https://www.typescriptlang.org/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Sobre el proyecto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Portafolio personal que reúne mi experiencia, proyectos, habilidades técnicas y formación académica. Diseñado con un enfoque editorial oscuro, animaciones suaves y una navegación limpia que refleja mi atención al detalle como desarrolladora.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Categoría | Tecnologías |
+|---|---|
+| **Frontend** | React 19, TypeScript 6, Framer Motion 12, React Icons 5 |
+| **Estilos** | CSS Modules, CSS Custom Properties, glassmorphism, backdrop-filter |
+| **Build** | Vite 8 + @vitejs/plugin-react |
+| **Contacto** | Web3Forms |
+| **Linting** | ESLint 10, typescript-eslint, eslint-plugin-react-hooks |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Secciones
+
+- **Hero** — Presentación con typewriter y foto profesional
+- **Sobre mí** — Bio + habilidades blandas + idiomas
+- **Habilidades** — Tech stack organizado por categorías con íconos
+- **Proyectos** — Variedades Danii, SIMÉTRICA con demo y código
+- **Formación** — Timeline educativo (SENA, EAM, Oracle Next Education)
+- **Contacto** — Formulario funcional con Web3Forms + links directos
+
+---
+
+## Setup local
+
+```bash
+git clone https://github.com/hws-1028/portfolio.git
+cd portfolio
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Variables de entorno
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Crea un archivo `.env` con tu API key de Web3Forms:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```env
+VITE_WEB3FORMS_KEY=tu_key_aqui
 ```
+
+> También puedes copiar `.env.example` y reemplazar el placeholder.
+
+### Desarrollo
+
+```bash
+npm run dev     # http://localhost:5173
+```
+
+### Producción
+
+```bash
+npm run build   # genera dist/
+npm run preview # previsualiza el build
+```
+
+---
+
+## Estructura
+
+```
+src/
+├── components/
+│   ├── layout/      # Header, Footer
+│   ├── sections/    # Hero, About, TechStack, Projects, Education, Contact
+│   └── ui/          # FloatingMenu, SectionHeader, ThemeToggle, GlassCard, ScrollToTop
+├── data/
+│   └── data.ts      # Toda la info centralizada (proyectos, skills, experiencia, etc.)
+├── hooks/
+│   └── useScrollTo.ts
+├── assets/          # Imágenes, favicon, CV
+├── App.tsx
+└── main.tsx
+```
+
+---
+
+## Contacto
+
+- **Email**: [anasofiaricardoaguilar@gmail.com](mailto:anasofiaricardoaguilar@gmail.com)
+- **LinkedIn**: [/in/ana-sofia-ricardo-aguilar](https://linkedin.com/in/ana-sofia-ricardo-aguilar)
+- **GitHub**: [@hws-1028](https://github.com/hws-1028)
+- **Portafolio**: [anasofiaricardo.com](https://anasofiaricardo.com)
