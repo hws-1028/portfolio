@@ -1,0 +1,13 @@
+.app {
+  min-height: 100vh;
+}
+
+.main {
+  padding-left: 0;
+}
+
+@media (min-width: 769px) {
+  .main {
+    padding-left: 80px;
+  }
+}

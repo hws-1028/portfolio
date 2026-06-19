@@ -1,0 +1,203 @@
+.layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 56px;
+  align-items: start;
+}
+
+/* ========================================
+   LEFT — Photo + orbiting icons
+   ======================================== */
+
+.leftCol {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 20px;
+  position: sticky;
+  top: calc(var(--nav-height, 80px) + 40px);
+}
+
+.orbitContainer {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photoWrap {
+  position: relative;
+  z-index: 2;
+}
+
+.photoGlow {
+  position: absolute;
+  inset: -16px;
+  border-radius: 50%;
+  background: var(--color-accent-glow-strong);
+  filter: blur(28px);
+}
+
+.orbitPhoto {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  border: 3px solid var(--color-accent);
+  box-shadow: 0 0 40px var(--color-accent-glow-strong);
+}
+
+.orbitRing {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  animation: orbitSpin 36s linear infinite;
+}
+
+.orbitIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  border: 1px solid var(--color-glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  transform: translate(calc(var(--ox) * 2.8), calc(var(--oy) * 2.8));
+  box-shadow: var(--shadow-sm);
+  transition: color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.orbitIcon:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 14px var(--color-accent-glow);
+}
+
+@keyframes orbitSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ========================================
+   RIGHT — Category cards
+   ======================================== */
+
+.rightCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.categoryCard {
+  background: var(--color-glass-bg);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.categoryCard:hover {
+  border-color: var(--color-accent-glow);
+  background: var(--color-glass-bg-hover);
+}
+
+.categoryTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 12px;
+  font-family: var(--font-body);
+}
+
+.chipsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-glass-border);
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.chip:hover {
+  border-color: var(--color-border-light);
+  background: var(--color-glass-bg-hover);
+}
+
+.chipIcon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.chipName {
+  font-weight: 500;
+}
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .leftCol {
+    position: static;
+    padding-top: 0;
+  }
+
+  .orbitContainer {
+    width: 220px;
+    height: 220px;
+  }
+
+  .orbitPhoto {
+    width: 90px;
+    height: 90px;
+  }
+
+  .orbitIcon {
+    width: 36px;
+    height: 36px;
+    transform: translate(calc(var(--ox) * 2.2), calc(var(--oy) * 2.2));
+  }
+
+  .categoriesGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}

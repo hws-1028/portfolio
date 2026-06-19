@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portafolio profesional de Ana Sofia Ricardo Aguilar — Desarrolladora Full Stack especializada en React, TypeScript, Node.js, Python, Java Spring e IA. Con sede en Armenia, Quindío, Colombia." />
+    <meta name="author" content="Ana Sofia Ricardo Aguilar" />
+    <meta name="keywords" content="desarrolladora full stack, react, typescript, node.js, python, java spring, inteligencia artificial, portafolio, colombia" />
+    <meta property="og:title" content="Ana Sofia Ricardo Aguilar — Full Stack Developer" />
+    <meta property="og:description" content="Portafolio profesional de Ana Sofia Ricardo Aguilar — Desarrolladora Full Stack especializada en React, TypeScript, Node.js, Python, Java Spring e IA." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ana Sofia Ricardo Aguilar — Full Stack Developer" />
+    <meta name="twitter:description" content="Portafolio profesional de Ana Sofia Ricardo Aguilar — Desarrolladora Full Stack especializada en React, TypeScript, Node.js, Python, Java Spring e IA." />
+    <meta name="theme-color" content="#09090b" />
+    <title>Ana Sofia Ricardo Aguilar — Full Stack Developer</title>
+    <script>
+      (function() {
+        const stored = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = stored || (prefersDark ? 'dark' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+        if (theme === 'light') {
+          document.documentElement.style.colorScheme = 'light';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

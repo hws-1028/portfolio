@@ -1,0 +1,112 @@
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.textCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.paragraph {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cardsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skillCard {
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.skillIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: var(--color-accent-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.skillInfo {
+  flex: 1;
+}
+
+.skillTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.skillDesc {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* Languages */
+.languages {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  flex-wrap: wrap;
+}
+
+.langLabel {
+  font-weight: 600;
+  color: var(--color-text-dim);
+}
+
+.langItem {
+  font-weight: 500;
+}
+
+.langLevel {
+  color: var(--color-accent-light);
+  font-weight: 600;
+}
+
+.langSep {
+  margin: 0 6px;
+  color: var(--color-text-dim);
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .paragraph {
+    font-size: 15px;
+  }
+
+  .skillCard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
