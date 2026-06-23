@@ -8,12 +8,14 @@ import type { Project } from '../../data/data';
 import variedadesDaniiImg from '../../assets/variedadesDanii.png';
 import simetricaImg from '../../assets/simetrica.png';
 import giraldoImg from '../../assets/giraldo.png';
+import portfolioImg from '../../assets/portfolio.png';
 import styles from './Projects.module.css';
 
 const projectImages: Record<string, string> = {
   'variedades-danii': variedadesDaniiImg,
   simetrica: simetricaImg,
   'giraldo-leguizamon': giraldoImg,
+  portfolio: portfolioImg,
 };
 
 const VISIBLE_PER_PAGE = 2;

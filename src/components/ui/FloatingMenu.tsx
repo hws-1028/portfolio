@@ -45,7 +45,6 @@ export function FloatingMenu({ theme, onToggleTheme }: FloatingMenuProps) {
   }, [open]);
 
   const handleNav = useCallback((id: string) => {
-    setOpen(false);
     if (id === 'hero') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {

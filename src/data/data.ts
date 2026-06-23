@@ -240,6 +240,27 @@ export const projects: Project[] = [
     demoUrl: 'https://giraldo-leguizamon-web.vercel.app/',
     codeUrl: 'https://github.com/hws-1028/giraldo-leguizamon-web',
   },
+  {
+    id: 'portfolio',
+    title: 'Portafolio Personal',
+    period: '2026',
+    type: 'Portafolio profesional Full Stack',
+    description:
+      'Portafolio web con diseño editorial oscuro, animaciones suaves, tema claro/oscuro y menú de navegación colapsable. Construido con React 19, TypeScript y Framer Motion.',
+    features: [
+      'Tema dark/light con persistencia en localStorage',
+      'Menú de navegación colapsable con animaciones stagger',
+      'Secciones: Hero, About, Skills, Proyectos, Formación, Contacto',
+      'Formulario de contacto funcional con Web3Forms',
+      'Carousel de proyectos con transiciones animadas',
+      'Diseño responsive mobile-first con glassmorphism',
+    ],
+    stack: ['React 19', 'TypeScript 6', 'Vite 8', 'Framer Motion', 'CSS Modules', 'Web3Forms'],
+    status: 'Completado',
+    thumbnail: 'portfolio.png',
+    demoUrl: 'https://portfolio-sandy-nine-94.vercel.app/',
+    codeUrl: 'https://github.com/hws-1028/portfolio',
+  },
 ];
 
 // ========================================
