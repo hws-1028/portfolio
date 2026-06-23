@@ -182,7 +182,7 @@ export const projects: Project[] = [
   {
     id: 'variedades-danii',
     title: 'Variedades Danii',
-    period: '2024–2025',
+    period: '2026–2026',
     type: 'Comercio electrónico de perfumería artesanal',
     description:
       'Tienda en línea completa con soporte de ventas en línea y punto de venta (TPV) presencial. Desarrollo completo abarcando frontend, backend, base de datos y despliegue con Docker.',
@@ -202,7 +202,7 @@ export const projects: Project[] = [
   {
     id: 'simetrica',
     title: 'SIMÉTRICA',
-    period: '2024–2025',
+    period: '2025–2026',
     type: 'Sitio corporativo + gestor de clientes',
     description:
       'Web corporativa y panel de administración para empresa de construcción, arquitectura y diseño. Sistema completo con gestión de contenido, proveedores y aplicaciones laborales.',
@@ -219,6 +219,27 @@ export const projects: Project[] = [
     demoUrl: 'https://www.simétrica.com/',
     codeUrl: 'https://github.com/Jruiz3019/SIM-TRICA',
   },
+  {
+    id: 'giraldo-leguizamon',
+    title: 'Giraldo Leguizamón',
+    period: '2026',
+    type: 'Landing page institucional para firma de abogados',
+    description:
+      'SPA con scroll snap full-screen para firma de abogados especializada en defensa legal del sector salud en Colombia. Cada sección encaja al viewport con transiciones suaves.',
+    features: [
+      'Scroll snap full-screen con scroll-snap-type: y mandatory',
+      'Drawer lateral responsive con stagger animation para navegación',
+      'Indicador de scroll SVG en zigzag sincronizado con stroke-dashoffset',
+      'Animaciones reveal al hacer scroll con IntersectionObserver',
+      'Íconos SVG inline dorados (#9d7a27) con viewBox unificado 48×48',
+      'Formulario conectado a Web3Forms con envío directo al correo del cliente',
+    ],
+    stack: ['React 19', 'TypeScript 6', 'Vite 8', 'React Router DOM 7', 'Axios', 'CSS'],
+    status: 'Completado',
+    thumbnail: 'giraldo.png',
+    demoUrl: 'https://giraldo-leguizamon-web.vercel.app/',
+    codeUrl: 'https://github.com/hws-1028/giraldo-leguizamon-web',
+  },
 ];
 
 // ========================================
@@ -230,21 +251,21 @@ export const education: Education[] = [
     id: 'eam',
     institution: 'EAM',
     degree: 'Ingeniería de Software (en curso)',
-    period: '2022–Presente',
+    period: '2025–Presente',
     description: 'Formación universitaria en ingeniería de software con énfasis en arquitectura de sistemas, bases de datos y metodologías ágiles.',
   },
   {
     id: 'sena',
     institution: 'SENA',
     degree: 'Tecnóloga en Análisis y Sistemas Informáticos',
-    period: '2020–2022',
+    period: '2022–2023',
     description: 'Egresada con méritos. Formación técnica en análisis, diseño e implementación de sistemas informáticos.',
   },
   {
     id: 'oracle',
     institution: 'Oracle Next Education',
     degree: 'Especialización Backend + IA',
-    period: '2024–2026',
+    period: '2025–2026',
     description: 'Programa de especialización enfocado en desarrollo backend con Java/Spring Boot e integración de soluciones de inteligencia artificial.',
   },
 ];
